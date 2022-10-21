@@ -2,9 +2,13 @@
 
 git clone https://github.com/huseyinbattal/navbar.git
 
+cd navbar/
+
 npm install
 
-see project at http://localhost:3000/
+npm start
+
+Open http://localhost:3000 with your browser to see the result.
 
 ## Screen Shoot
 
