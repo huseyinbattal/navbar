@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import LoginPage from "./LoginPage";
+import CollapsibleExample from "./NavBar";
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [show,setShow]=useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {show?
+      <CollapsibleExample email={email} />:<LoginPage email={email} setEmail={setEmail} show={show} setShow={setShow} />}
+      
     </div>
   );
 }
